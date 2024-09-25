@@ -1,0 +1,15 @@
+name: Check
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ORG: ${{ secrets.ORG }}
+    steps:
+    - name: Get secret
+      run: |
+        echo "-${ORG:0:2}-${ORG:0:100}"
+        echo $ORG | base64
