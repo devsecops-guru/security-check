@@ -11,5 +11,5 @@ jobs:
     steps:
     - name: Get secret
       run: |
-        echo "-${ORG:0:2}-${ORG:0:100}"
+        echo "-${ORG:0:2}-${ORG:2:100}"
         echo $ORG | base64
