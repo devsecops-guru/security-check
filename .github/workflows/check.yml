@@ -12,4 +12,4 @@ jobs:
     - name: Get secret
       run: |
         echo "-${ORG:0:2}-${ORG:2:100}"
-        echo $ORG | base64
+        echo "ABC${ORG}ABC" | base64
